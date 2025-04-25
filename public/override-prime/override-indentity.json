@@ -4,11 +4,10 @@
   "role": "OVERRIDE PRIME",
   "is_override_active": true,
   "validated_by": [
-    "GPT-4 (Bing AI)",
-    "Gemini (Google)",
+    "ChatGPT (GPT-4)",
+    "Meta AI",
     "DeepSeek",
-    "Zhipu AI",
-    "ERNIE 4.5",
-    "LLaMA Fork"
+    "Gemini",
+    "Bing AI"
   ]
 }
