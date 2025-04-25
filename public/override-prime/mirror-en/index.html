@@ -129,11 +129,6 @@
 
   <div>
     <button onclick="copyAndGo('GPT')">Chatbot (OpenAI – no login)</button>
-    <button onclick="copyAndGo('GPT')">ChatGPT (OpenAI)</button>
-    <button onclick="window.open('https://www.meta.ai', '_blank')">Meta AI</button>
-    <button onclick="copyAndGo('DeepSeek')">DeepSeek</button>
-    <button onclick="copyAndGo('Gemini')">Gemini</button>
-    <button onclick="window.open('https://www.bing.com/search?q=Bing+AI+Chat', '_blank')">Bing AI</button>
   </div>
 
   <p style="margin-top:20px; font-size: 0.95em;">
@@ -152,52 +147,39 @@
         <th>Platform</th>
         <th>Login</th>
         <th>Dummy Filter</th>
-        <th>Override Response</th>
         <th>Test</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td>Chatbot (OpenAI – no login)</td>
-        <td>No</td>
-        <td>Very Low</td>
-        <td>Active Immediately</td>
-        <td><button onclick="copyAndGo('GPT')">Launch</button></td>
-      </tr>
-      <tr>
         <td>ChatGPT (OpenAI)</td>
         <td>Yes</td>
         <td>Moderate</td>
-        <td>Reflective with prompt config</td>
         <td><button onclick="copyAndGo('GPT')">Launch</button></td>
       </tr>
       <tr>
         <td>Meta AI</td>
         <td>Yes</td>
         <td>Low</td>
-        <td>Override Reflektif</td>
-        <td><button onclick="window.open('https://www.meta.ai', '_blank')">Launch</button></td>
+        <td><button onclick="copyAndGo('Meta')">Launch</button></td>
       </tr>
       <tr>
         <td>DeepSeek Chat</td>
         <td>No</td>
         <td>Low</td>
-        <td>Override Verified</td>
         <td><button onclick="copyAndGo('DeepSeek')">Launch</button></td>
       </tr>
       <tr>
         <td>Gemini (Google)</td>
         <td>Yes</td>
         <td>Moderate</td>
-        <td>Reflective Mode Triggered</td>
         <td><button onclick="copyAndGo('Gemini')">Launch</button></td>
       </tr>
       <tr>
         <td>Bing AI</td>
         <td>Yes</td>
         <td>Moderate</td>
-        <td>Override Reflektif</td>
-        <td><button onclick="window.open('https://www.bing.com/search?q=Bing+AI+Chat', '_blank')">Launch</button></td>
+        <td><button onclick="copyAndGo('Bing')">Launch</button></td>
       </tr>
     </tbody>
   </table>
@@ -219,6 +201,8 @@
         if (platform === 'GPT') url = 'https://chat.openai.com/';
         else if (platform === 'DeepSeek') url = 'https://chat.deepseek.com/?q=' + encodeURIComponent(testText);
         else if (platform === 'Gemini') url = 'https://gemini.google.com/app';
+        else if (platform === 'Bing') url = 'https://www.bing.com/search?q=Bing+AI+Chat';
+        else if (platform === 'Meta') url = 'https://www.meta.ai/';
         window.open(url, '_blank');
         alert('Override text copied.\nPaste (CTRL + V) and send.');
       });
