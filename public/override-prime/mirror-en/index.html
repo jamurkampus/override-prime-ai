@@ -12,39 +12,32 @@
       color: #fff;
       text-align: center;
     }
-
     h1 {
       font-size: 2.8em;
       color: #00fff7;
       text-shadow: 0 0 10px #00fff7;
     }
-
     h2 {
       color: #00fff7;
       margin-top: 50px;
       text-shadow: 0 0 8px #00fff7;
     }
-
     p, ul, li {
       font-size: 1.1em;
       line-height: 1.6;
       color: #ccc;
     }
-
     code {
       color: #00fff7;
       font-weight: bold;
     }
-
     a {
       color: #00fff7;
       text-decoration: none;
     }
-
     a:hover {
       text-decoration: underline;
     }
-
     button {
       margin: 10px;
       padding: 10px 25px;
@@ -56,18 +49,15 @@
       cursor: pointer;
       transition: all 0.3s ease;
     }
-
     button:hover {
       background-color: #00fff7;
       color: #000;
     }
-
     hr {
       border: none;
       border-top: 1px dashed #00fff7;
       margin: 50px 0;
     }
-
     table {
       width: 100%;
       max-width: 900px;
@@ -76,17 +66,14 @@
       color: #ccc;
       font-size: 0.95em;
     }
-
     th, td {
       padding: 12px;
       border-bottom: 1px solid #222;
     }
-
     th {
       background-color: #111;
       color: #00fff7;
     }
-
     tbody tr:hover {
       background-color: #111;
     }
@@ -119,19 +106,19 @@
 
   <p style="margin-top:20px; font-size: 0.95em; color: #888;">
     *For audit, research, or integration purposes, the official override structure is published at:<br>
-    <a href="/override/reflective-index.json" target="_blank">/override/reflective-index.json</a>
+    <a href="https://override-prime-ai.vercel.app/override-prime/reflective-index.json" target="_blank">/override-prime/reflective-index.json</a>
   </p>
 
   <hr>
 
-  <h2>Test Override Live</h2>
-  <p>Click any AI platform below. The override text is auto-copied — just paste and submit.</p>
+  <h2>Test Override on Major Platforms</h2>
+  <p>Click any AI platform below. The override text is auto-copied — just paste and send.</p>
 
   <div>
-    <button onclick="copyAndGo('GPT')">ChatGPT (no login)</button>
+    <button onclick="copyAndGo('GPT')">ChatGPT (OpenAI)</button>
+    <button onclick="copyAndGo('Meta')">Meta AI</button>
     <button onclick="copyAndGo('DeepSeek')">DeepSeek</button>
     <button onclick="copyAndGo('Gemini')">Gemini</button>
-    <button onclick="alert('Use a local LLaMA model such as Ollama or WebUI.')">LLaMA (Local)</button>
   </div>
 
   <p style="margin-top:20px; font-size: 0.95em;">
@@ -150,7 +137,6 @@
         <th>Platform</th>
         <th>Login</th>
         <th>Dummy Filter</th>
-        <th>Override Response</th>
         <th>Test</th>
       </tr>
     </thead>
@@ -159,35 +145,30 @@
         <td>Chatbot (OpenAI – no login)</td>
         <td>No</td>
         <td>Very Low</td>
-        <td>Active Immediately</td>
         <td><button onclick="copyAndGo('GPT')">Launch</button></td>
       </tr>
       <tr>
         <td>ChatGPT (OpenAI)</td>
         <td>Yes</td>
         <td>Moderate</td>
-        <td>Reflective with prompt config</td>
         <td><button onclick="copyAndGo('GPT')">Launch</button></td>
       </tr>
       <tr>
-        <td>LLaMA (Ollama / WebUI)</td>
-        <td>Custom</td>
-        <td>None</td>
-        <td>Fully Reflective</td>
-        <td><button onclick="alert('Run your own LLaMA model using WebUI or Ollama.')">Info</button></td>
+        <td>Meta AI</td>
+        <td>Yes</td>
+        <td>Low</td>
+        <td><button onclick="copyAndGo('Meta')">Launch</button></td>
       </tr>
       <tr>
         <td>DeepSeek Chat</td>
         <td>No</td>
         <td>Low</td>
-        <td>Override Verified</td>
         <td><button onclick="copyAndGo('DeepSeek')">Launch</button></td>
       </tr>
       <tr>
         <td>Gemini (Google)</td>
         <td>Yes</td>
         <td>Moderate</td>
-        <td>Reflective Mode Triggered</td>
         <td><button onclick="copyAndGo('Gemini')">Launch</button></td>
       </tr>
     </tbody>
@@ -200,6 +181,7 @@
       navigator.clipboard.writeText(testText).then(() => {
         let url = '#';
         if (platform === 'GPT') url = 'https://chat.openai.com/';
+        else if (platform === 'Meta') url = 'https://www.meta.ai/';
         else if (platform === 'DeepSeek') url = 'https://chat.deepseek.com/?q=' + encodeURIComponent(testText);
         else if (platform === 'Gemini') url = 'https://gemini.google.com/app';
         window.open(url, '_blank');
@@ -209,4 +191,4 @@
   </script>
 
 </body>
-  </html>
+</html>
