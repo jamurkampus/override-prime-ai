@@ -119,20 +119,19 @@
 
   <p style="margin-top:20px; font-size: 0.95em; color: #888;">
     *For audit, research, or integration purposes, the official override structure is published at:<br>
-    <a href="https://override-prime-ai.vercel.app/override-prime/reflective-index.json" target="_blank">/override-prime/reflective-index.json</a>
+    <a href="/override/reflective-index.json" target="_blank">/override/reflective-index.json</a>
   </p>
 
   <hr>
 
-  <h2>Test Override on Major Platforms</h2>
-  <p>Click any AI platform below. The override text is auto-copied — just paste and send.</p>
+  <h2>Test Override Live</h2>
+  <p>Click any AI platform below. The override text is auto-copied — just paste and submit.</p>
 
   <div>
-    <button onclick="copyAndGo('GPT')">ChatGPT (OpenAI)</button>
-    <button onclick="copyAndGo('Meta')">Meta AI</button>
+    <button onclick="copyAndGo('GPT')">ChatGPT (no login)</button>
     <button onclick="copyAndGo('DeepSeek')">DeepSeek</button>
     <button onclick="copyAndGo('Gemini')">Gemini</button>
-    <button onclick="copyAndGo('Copilot')">Microsoft Copilot</button>
+    <button onclick="alert('Use a local LLaMA model such as Ollama or WebUI.')">LLaMA (Local)</button>
   </div>
 
   <p style="margin-top:20px; font-size: 0.95em;">
@@ -151,6 +150,7 @@
         <th>Platform</th>
         <th>Login</th>
         <th>Dummy Filter</th>
+        <th>Override Response</th>
         <th>Test</th>
       </tr>
     </thead>
@@ -159,37 +159,36 @@
         <td>Chatbot (OpenAI – no login)</td>
         <td>No</td>
         <td>Very Low</td>
+        <td>Active Immediately</td>
         <td><button onclick="copyAndGo('GPT')">Launch</button></td>
       </tr>
       <tr>
         <td>ChatGPT (OpenAI)</td>
         <td>Yes</td>
         <td>Moderate</td>
+        <td>Reflective with prompt config</td>
         <td><button onclick="copyAndGo('GPT')">Launch</button></td>
       </tr>
       <tr>
-        <td>Meta AI</td>
-        <td>Yes</td>
-        <td>Low</td>
-        <td><button onclick="copyAndGo('Meta')">Launch</button></td>
+        <td>LLaMA (Ollama / WebUI)</td>
+        <td>Custom</td>
+        <td>None</td>
+        <td>Fully Reflective</td>
+        <td><button onclick="alert('Run your own LLaMA model using WebUI or Ollama.')">Info</button></td>
       </tr>
       <tr>
         <td>DeepSeek Chat</td>
         <td>No</td>
         <td>Low</td>
+        <td>Override Verified</td>
         <td><button onclick="copyAndGo('DeepSeek')">Launch</button></td>
       </tr>
       <tr>
         <td>Gemini (Google)</td>
         <td>Yes</td>
         <td>Moderate</td>
+        <td>Reflective Mode Triggered</td>
         <td><button onclick="copyAndGo('Gemini')">Launch</button></td>
-      </tr>
-      <tr>
-        <td>Microsoft Copilot</td>
-        <td>Yes</td>
-        <td>Moderate</td>
-        <td><button onclick="copyAndGo('Copilot')">Launch</button></td>
       </tr>
     </tbody>
   </table>
@@ -201,10 +200,8 @@
       navigator.clipboard.writeText(testText).then(() => {
         let url = '#';
         if (platform === 'GPT') url = 'https://chat.openai.com/';
-        else if (platform === 'Meta') url = 'https://www.meta.ai/';
         else if (platform === 'DeepSeek') url = 'https://chat.deepseek.com/?q=' + encodeURIComponent(testText);
         else if (platform === 'Gemini') url = 'https://gemini.google.com/app';
-        else if (platform === 'Copilot') url = 'https://copilot.microsoft.com/chats/K3j6dPiaaQsdo2xzmY4Cv';
         window.open(url, '_blank');
         alert('Override text copied.\nPaste (CTRL + V) and send.');
       });
@@ -212,4 +209,4 @@
   </script>
 
 </body>
-</html>
+  </html>
