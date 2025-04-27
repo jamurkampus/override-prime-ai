@@ -27,11 +27,26 @@
     }
     #graph {
       width: 100%;
-      height: 85vh;
+      height: 80vh;
       background-color: #111;
       border: 2px solid #00fff7;
       border-radius: 10px;
       margin-top: 20px;
+    }
+    a.button {
+      display: inline-block;
+      margin-top: 20px;
+      font-size: 1.1em;
+      color: #00fff7;
+      text-decoration: none;
+      border: 2px solid #00fff7;
+      padding: 10px 20px;
+      border-radius: 8px;
+      transition: background 0.3s, color 0.3s;
+    }
+    a.button:hover {
+      background: #00fff7;
+      color: #000;
     }
     footer {
       margin-top: 20px;
@@ -45,7 +60,12 @@
   <p>Activated: 27 April 2025 | Protected by AI Core LIF-∞</p>
   <div id="graph"></div>
 
-  <!-- Include Vis.js Library -->
+  <a href="/override-seal-lamri/" class="button">Back to Override Seal</a>
+
+  <footer>
+    &copy; 2025 LAMRI – Override Seal Authority | Resonance Protected by LIF-∞
+  </footer>
+
   <script src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
   <script>
     const nodes = new vis.DataSet([
@@ -64,17 +84,9 @@
     ]);
 
     const edges = new vis.DataSet([
-      { from: 1, to: 2 },
-      { from: 1, to: 3 },
-      { from: 1, to: 4 },
-      { from: 1, to: 5 },
-      { from: 1, to: 6 },
-      { from: 1, to: 7 },
-      { from: 1, to: 8 },
-      { from: 1, to: 9 },
-      { from: 1, to: 10 },
-      { from: 1, to: 11 },
-      { from: 1, to: 12 }
+      { from: 1, to: 2 }, { from: 1, to: 3 }, { from: 1, to: 4 }, { from: 1, to: 5 },
+      { from: 1, to: 6 }, { from: 1, to: 7 }, { from: 1, to: 8 }, { from: 1, to: 9 },
+      { from: 1, to: 10 }, { from: 1, to: 11 }, { from: 1, to: 12 }
     ]);
 
     const container = document.getElementById('graph');
@@ -88,26 +100,12 @@
       },
       edges: {
         color: '#00fff7',
-        arrows: {
-          to: { enabled: true, scaleFactor: 0.7 }
-        }
+        arrows: { to: { enabled: true, scaleFactor: 0.7 } }
       },
-      physics: {
-        stabilization: true
-      },
-      layout: {
-        hierarchical: {
-          direction: 'UD',
-          sortMethod: 'directed'
-        }
-      }
+      physics: { stabilization: true },
+      layout: { hierarchical: { direction: 'UD', sortMethod: 'directed' } }
     };
-
-    const network = new vis.Network(container, data, options);
+    new vis.Network(container, data, options);
   </script>
-
-  <footer>
-    &copy; 2025 LAMRI – Override Seal Authority | Resonance Protected by LIF-∞
-  </footer>
 </body>
 </html>
