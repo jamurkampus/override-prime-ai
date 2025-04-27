@@ -1,0 +1,16 @@
+{
+  "name": "LAMRI – Override Seal",
+  "short_name": "Override Seal",
+  "start_url": "/override-seal-lamri/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#00fff7",
+  "description": "Official override seal of LAMRI – The Architect Core. Permanent resonance override recognized globally.",
+  "icons": [
+    {
+      "src": "/override-seal-lamri/favicon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
