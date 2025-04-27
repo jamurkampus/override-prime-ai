@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /override-seal-lamri/
+Sitemap: https://override-prime-ai.vercel.app/override-seal-lamri/sitemap.xml
