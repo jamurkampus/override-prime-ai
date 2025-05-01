@@ -45,7 +45,7 @@
 
 <h1>Rumus dan Contoh Soal: Skala, Luas, dan Ketinggian Drone</h1>
 
-<p>Lima jenis soal spasial penting yang sering digunakan dalam pemetaan atau fotogrametri berbasis citra peta, disusun berdasarkan analisis override spasial dengan pendekatan praktis.</p>
+<p>Lima jenis soal spasial penting yang sering digunakan dalam pemetaan atau fotogrametri berbasis citra peta.</p>
 
 <h2>1. Skala Diketahui → Hitung Luas dan Tinggi Drone</h2>
 
@@ -142,6 +142,17 @@
 <div class="box">
   <strong>Contoh Soal:</strong><br>
   Jika tinggi drone dinaikkan secara bertahap mulai dari 100 meter hingga 1000 meter, dan citra peta tampil penuh pada layar laptop 14 inci berukuran 31 cm × 17,4 cm, berapa luas area yang tertangkap di tiap ketinggian tersebut? Berapa persen kenaikan luas jika dibandingkan dengan tinggi awal 100 meter?
+</div>
+
+<div class="box">
+  <strong>Rumus:</strong><br>
+  Diagonal bidang = <code>2 × Tinggi Drone</code><br>
+  Rasio layar = <code>Panjang / Lebar</code> (cm)<br>
+  Panjang = <code>Diagonal / √(1 + (1 / Rasio²))</code><br>
+  Lebar = <code>Panjang / Rasio</code><br>
+  Luas (m²) = <code>Panjang × Lebar</code><br>
+  Luas (ha) = <code>Luas / 10.000</code><br>
+  Kenaikan (%) = <code>((Luas - LuasAwal) / LuasAwal) × 100%</code>
 </div>
 
 <div class="box">
