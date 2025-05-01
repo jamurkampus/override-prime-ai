@@ -27,13 +27,25 @@
       margin: 20px 0;
       box-shadow: 0 0 10px rgba(0,0,0,0.05);
     }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 8px;
+      text-align: center;
+    }
+    thead {
+      background-color: #e0ecff;
+    }
   </style>
 </head>
 <body>
 
 <h1>Rumus dan Contoh Soal: Skala, Luas, dan Ketinggian Drone</h1>
 
-<p>Dua jenis soal spasial penting yang sering digunakan dalam pemetaan atau fotogrametri berbasis citra peta.</p>
+<p>Empat jenis soal spasial penting yang sering digunakan dalam pemetaan atau fotogrametri berbasis citra peta.</p>
 
 <h2>1. Skala Diketahui → Hitung Luas dan Tinggi Drone</h2>
 
@@ -75,6 +87,54 @@
   Panjang = 29.7 × 552.52 = 16.423 m<br>
   Lebar = 21 × 552.52 = 11.603 m<br>
   Luas = 16.423 × 11.603 = 191.200.000 m² = <strong>19.120 hektar</strong>
+</div>
+
+<h2>3. Soal Lapangan Real: Ukuran Layar Laptop 14 Inci</h2>
+
+<div class="box">
+  <strong>Contoh Soal:</strong><br>
+  Pada layar laptop 14 inci, area peta QGIS yang terlihat diukur secara manual adalah 31 cm (panjang) dan 13,6 cm (lebar). Jika skala citra adalah 1 : 10.000, berapa luas area yang tertangkap dalam tampilan peta tersebut, dan berapa ketinggian drone untuk memotret penuh secara ortogonal?<br><br>
+
+  <strong>Jawaban:</strong><br>
+  Panjang nyata = 31 × 100 = 3.100 m<br>
+  Lebar nyata = 13,6 × 100 = 1.360 m<br>
+  Luas = 3.100 × 1.360 = 4.216.000 m² = <strong>421,6 hektar</strong><br>
+  Diagonal = √(3100² + 1360²) ≈ 3.384 m<br>
+  Tinggi drone = 3.384 / 2 = <strong>±1,69 km</strong>
+</div>
+
+<h2>4. Skala Bertingkat → Perbandingan Luas dan Ketinggian Drone</h2>
+
+<div class="box">
+  <strong>Contoh Soal:</strong><br>
+  Diketahui ukuran layar peta 31 cm × 13,6 cm. Jika skala dimulai dari 1:1000 dan dinaikkan secara bertahap hingga 1:10.000, hitung berapa luas area yang tercakup, tinggi drone yang dibutuhkan, dan persentase kenaikannya dari skala awal.
+</div>
+
+<div class="box">
+  <strong>Tabel Perbandingan:</strong><br><br>
+  <table>
+    <thead>
+      <tr>
+        <th>Skala</th>
+        <th>Luas (ha)</th>
+        <th>Tinggi Drone (km)</th>
+        <th>Kenaikan Luas (%)</th>
+        <th>Kenaikan Tinggi (%)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>1:1000</td><td>4,22</td><td>0,17</td><td>–</td><td>–</td></tr>
+      <tr><td>1:2000</td><td>16,86</td><td>0,34</td><td>+300%</td><td>+100%</td></tr>
+      <tr><td>1:3000</td><td>37,97</td><td>0,51</td><td>+800%</td><td>+200%</td></tr>
+      <tr><td>1:4000</td><td>67,43</td><td>0,68</td><td>+1497%</td><td>+300%</td></tr>
+      <tr><td>1:5000</td><td>105,40</td><td>0,85</td><td>+2397%</td><td>+400%</td></tr>
+      <tr><td>1:6000</td><td>151,72</td><td>1,02</td><td>+3493%</td><td>+500%</td></tr>
+      <tr><td>1:7000</td><td>206,41</td><td>1,18</td><td>+4793%</td><td>+600%</td></tr>
+      <tr><td>1:8000</td><td>269,45</td><td>1,35</td><td>+6287%</td><td>+700%</td></tr>
+      <tr><td>1:9000</td><td>340,86</td><td>1,52</td><td>+7973%</td><td>+800%</td></tr>
+      <tr><td>1:10000</td><td>421,60</td><td>1,69</td><td>+9850%</td><td>+900%</td></tr>
+    </tbody>
+  </table>
 </div>
 
 </body>
