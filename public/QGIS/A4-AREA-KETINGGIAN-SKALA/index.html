@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Rumus Peta: Skala, Luas, dan Ketinggian Drone</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9fafc;
+      color: #222;
+      margin: 20px;
+      line-height: 1.6;
+    }
+    h1, h2 {
+      color: #003366;
+    }
+    code {
+      background: #eaeaea;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: Consolas, monospace;
+    }
+    .box {
+      background: white;
+      border-left: 5px solid #3366cc;
+      padding: 15px;
+      margin: 20px 0;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+  </style>
+</head>
+<body>
+
+<h1>Rumus dan Contoh Soal: Skala, Luas, dan Ketinggian Drone</h1>
+
+<p>Dua jenis soal spasial penting yang sering digunakan dalam pemetaan atau fotogrametri berbasis citra peta.</p>
+
+<h2>1. Skala Diketahui → Hitung Luas dan Tinggi Drone</h2>
+
+<div class="box">
+  <strong>Rumus:</strong><br>
+  Panjang = <code>PanjangKertas × Skala / 100</code><br>
+  Lebar = <code>LebarKertas × Skala / 100</code><br>
+  Luas hektar = <code>(Panjang × Lebar) / 10000</code><br>
+  TinggiDrone = <code>√(Panjang² + Lebar²) / 2</code>
+</div>
+
+<div class="box">
+  <strong>Contoh Soal:</strong><br>
+  Peta berukuran A4 (21 cm × 29.7 cm) dengan skala 1 : 51287. Hitung luas area yang tercakup dan tinggi drone yang dibutuhkan secara ortogonal.<br><br>
+  <strong>Jawaban:</strong><br>
+  Panjang = 29.7 × 512.87 = 15.230,34 m<br>
+  Lebar = 21 × 512.87 = 10.770,27 m<br>
+  Luas = 15.230,34 × 10.770,27 = 164.097.404 m² = <strong>16.409,7 hektar</strong><br>
+  Tinggi drone = √(15230.34² + 10770.27²) / 2 ≈ <strong>9,33 km</strong>
+</div>
+
+<h2>2. Ketinggian Drone Diketahui → Hitung Skala dan Luas</h2>
+
+<div class="box">
+  <strong>Rumus:</strong><br>
+  DiagonalKertas = <code>√(PanjangKertas² + LebarKertas²)</code><br>
+  Skala = <code>(2 × Tinggi × 100) / DiagonalKertas</code><br>
+  Panjang = <code>PanjangKertas × Skala / 100</code><br>
+  Lebar = <code>LebarKertas × Skala / 100</code><br>
+  Luas hektar = <code>(Panjang × Lebar) / 10000</code>
+</div>
+
+<div class="box">
+  <strong>Contoh Soal:</strong><br>
+  Drone berada di ketinggian 10 km. Ukuran peta A4 penuh (21 cm × 29.7 cm). Hitung luas area yang terlihat dan skala peta yang akan tercetak.<br><br>
+  <strong>Jawaban:</strong><br>
+  Diagonal kertas = √(21² + 29.7²) ≈ 36,2 cm<br>
+  Skala = (2 × 10000 × 100) / 36,2 ≈ <strong>1 : 55252</strong><br>
+  Panjang = 29.7 × 552.52 = 16.423 m<br>
+  Lebar = 21 × 552.52 = 11.603 m<br>
+  Luas = 16.423 × 11.603 = 191.200.000 m² = <strong>19.120 hektar</strong>
+</div>
+
+</body>
+</html>
